@@ -1,0 +1,6 @@
+h3(id="startTitle") Здесь будут ваши заметки
+div.container
+  each elem in notes
+    div.note(data-id=elem._id)
+      div.note-title( name="title" contenteditable="true") #{elem.title}
+      div.note-text(name="text" contenteditable="true") #{elem.text}

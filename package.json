@@ -1,0 +1,26 @@
+{
+  "name": "step_project_notes",
+  "version": "1.0.0",
+  "description": "step project notes ",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekrechetov/step_project_notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekrechetov/step_project_notes/issues"
+  },
+  "homepage": "https://github.com/ekrechetov/step_project_notes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.13",
+    "pug": "^2.0.3"
+  }
+}
