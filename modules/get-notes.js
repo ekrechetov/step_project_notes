@@ -9,6 +9,6 @@ module.exports = (app) => {
     const notesCol = notesDb.collection(colName);
     const notes = await notesCol.find({}).toArray();
     connection.close(); 
-    res.render('index', {title: 'Notes', notes: notes});    
+    res.render('index', {notes: notes});    
   });
 }
