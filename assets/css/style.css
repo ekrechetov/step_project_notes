@@ -1,6 +1,9 @@
 body {
   background-color: rgb(211, 204, 204);
 }
+#startTitle {
+  text-align: center;
+}
 ul {
   padding: 0;
   list-style-type: none;

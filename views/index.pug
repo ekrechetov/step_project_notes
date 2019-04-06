@@ -10,8 +10,8 @@ html(lang="en")
     link(href="./css/style.css" rel="stylesheet")
   body    
     div.container-fluid.d-flex.justify-content-center
-      button.btn.btn-secondary.mb-4.mt-4(type="button" id="btnAddNote") Добавить заметку
-      h3(id="startTitle") Здесь будут ваши заметки
+      button.btn.btn-secondary.mb-4.mt-4(type="button" id="btnAddNote" onclick="createNote()") Добавить заметку
+    h3(id="startTitle") Здесь будут ваши заметки
     div.container
       ul
         each elem in notes
