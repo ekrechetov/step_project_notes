@@ -11,14 +11,13 @@ html
       form#myform(method='post').mt-3
           div.form-group
               label(for="noteTitle").h5.font-weight-bold.mb-3 Заголовок
-              input.form-control#noteId(type='hidden' name='id' value=note._id)
-              input.form-control#noteTitle(type='text' name='title' value=note.title)
+              input.form-control#noteId(type='hidden' value='')
+              input.form-control#noteTitle(type='text' name='title')
           div.form-group
               label(for="noteText").h5.mb-3.mt-3.font-weight-bold Текст
-              textarea.form-control#noteText(type='text' name='text') #{note.text}
+              textarea.form-control#noteText(type='text' name='text')
           div.form-group.d-flex.flex-column.align-items-center
-              button.btn.btn-success.mb-4.mt-4(type="button" onclick="updateData()" name="save") Сохранить изменения
+              button.btn.btn-success.mb-4.mt-4(type="button" onclick='sendData()' name="save") Сохранить заметку
               button.btn.btn-secondary.mb-4#cl(type="button" onclick="cancelBtn()" name="close") Отмена
-              button.btn.btn-danger(type="button" onclick="deleteData()" name="delete") Удалить
 
   script(src = "../js/script.js")

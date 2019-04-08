@@ -9,9 +9,7 @@ module.exports = (app) => {
     const notesDb = connection.db(dbName);
     const notesCol = notesDb.collection(colName);
     const note = await notesCol.findOne({_id: id});
-
-    connection.close();
-   
-    res.render('edit-note.pug', {title: 'Notes', note: note});    
+    connection.close();   
+    res.render('edit-note.pug', {note: note});    
   });
 }

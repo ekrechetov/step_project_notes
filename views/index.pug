@@ -1,3 +1,22 @@
-include header
-include notes
-script(src = "./js/script.js")
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Notes
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet")
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+    link(href="./css/style.css" rel="stylesheet")
+  body    
+    div.container-fluid.d-flex.justify-content-center
+      button.btn.btn-secondary.mb-4.mt-4(type="button" id="btnAddNote" onclick="createNote()") Добавить заметку
+    h3(id="startTitle") Здесь будут ваши заметки
+    div.container
+      ul
+        each elem in notes
+          li.note(data-id=elem._id)
+            h5.note-title(name="title") #{elem.title}
+            p.note-text(name="text") #{elem.text}
+
+    script(src = "./js/script.js")
