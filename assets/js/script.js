@@ -8,6 +8,11 @@ function createNote() {
   window.location.replace("/notes");
 }
 
+function createList() {
+  window.location.replace("/list");
+}
+
+
 //cancel create note:
 function cancelBtn() {
   window.location.replace("/");
