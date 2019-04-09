@@ -7,6 +7,7 @@ if (document.querySelector('.note')) {
 function createNote() {
   window.location.replace("/notes");
 }
+
 // create list:
 function createList() {
   window.location.replace("/lists");
@@ -43,7 +44,7 @@ $('.note').click(function() {
   let type = $(this).attr("data-type");
   if (type == 'list') {
     window.location.replace("/lists/" + id);
-  } else window.location.replace("/notes/" + id);  
+  } else window.location.replace("/notes/" + id);
 });
 
 //send note to server for update in database:
