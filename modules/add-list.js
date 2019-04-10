@@ -3,11 +3,11 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 
 module.exports = (app) => {
-  app.get("/list", (req, res) => {
-    res.render("create-list.pug");
+  app.get("/lists", (req, res) => {
+    res.render("create-list.pug", {note: '', _id: ''});
   });
 
-  app.post("/list", async function (req, res) {       
+  app.post("/lists", async function (req, res) {       
     if(!req.body) return res.sendStatus(400);
     const note = req.body;
     let connection = await MongoClient.connect(uri, {useNewUrlParser: true});

@@ -7,7 +7,6 @@ const deleteNote = require('../modules/delete-note');
 
 const addList = require('../modules/add-list');
 const getList = require('../modules/get-list.js');
-const getLists = require('../modules/get-lists.js');
 const updateList = require('../modules/update-list');
 const deleteList = require('../modules/delete-list');
 
@@ -22,7 +21,6 @@ module.exports = (app) => {
 
   addList(app);
   getList(app);
-  getLists(app);
   updateList(app);
   deleteList(app);
 }

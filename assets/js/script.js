@@ -9,14 +9,9 @@ function createNote() {
 }
 
 function createList() {
-  window.location.replace("/list");
+  window.location.replace("/lists");
 }
 
-
-//cancel create note:
-function cancelBtn() {
-  window.location.replace("/");
-}
 
 //send note to server for add to database:
 function sendData() {
