@@ -8,6 +8,11 @@ function createNote() {
   window.location.replace("/notes");
 }
 
+// create list:
+function createList() {
+  window.location.replace("/lists");
+}
+
 //cancel create note:
 function cancelBtn() {
   window.location.replace("/");
@@ -36,7 +41,10 @@ function sendData() {
 // get one note:
 $('.note').click(function() {
   let id = $(this).attr("data-id");
-  window.location.replace("/notes/" + id);
+  let type = $(this).attr("data-type");
+  if (type == 'list') {
+    window.location.replace("/lists/" + id);
+  } else window.location.replace("/notes/" + id);
 });
 
 //send note to server for update in database:

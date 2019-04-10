@@ -2,9 +2,10 @@ const checkConnection = require('../modules/check-connection.js');
 const getNotes = require('../modules/get-notes.js');
 const addNote = require('../modules/add-note.js');
 const getNote = require('../modules/get-note.js');
-const updateNote = require('../modules/update-note');
-const deleteNote = require('../modules/delete-note');
-// const addList = require('../app/modules/list/addList');
+const updateNote = require('../modules/update-note.js');
+const deleteNote = require('../modules/delete-note.js');
+const addList = require('../modules/add-list.js');
+const getList = require('../modules/get-list.js');
 
 module.exports = (app) => {
   checkConnection(app);
@@ -13,5 +14,6 @@ module.exports = (app) => {
   getNote(app);
   updateNote(app);
   deleteNote(app);
-	// addList(app, db);
+	addList(app);
+	getList(app);
 }
