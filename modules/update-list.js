@@ -3,20 +3,16 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 
 module.exports = (app) => {
-  app.get("/lists", (req, res) => {
-    res.render("create-list.pug", {note: '', _id: ''});
-  });
-
-  app.post("/lists", async function (req, res) {       
-    if(!req.body) return res.sendStatus(400);
-    const note = req.body;
+  app.put('/lists/:id', async function (req, res) {
     let connection = await MongoClient.connect(uri, {useNewUrlParser: true});
-    console.log('Connected for add: Ok');
+    console.log('Connected for update: Ok');
+    const id = new ObjectID(req.body.id);
     const database = connection.db(dbName);
     const notesCol = database.collection(colName);
-    const addedNote = await notesCol.insertOne(note);
+    console.log(req.body);
+    await notesCol.updateOne({_id: id}, {$set: {title: req.body.title, content: req.body.content}}, {upsert: false});
+    console.log('List was updated: Ok');
     connection.close();
-    console.log('List was added: Yes');
-    res.redirect("/");
+    res.send('List was updated!');
   });
-}
+}   

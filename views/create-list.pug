@@ -20,8 +20,8 @@ html
 				div.closed-do#closedlist
 			div.d-flex.justify-content-between
 				button.btn.btn-secondary.btn-sm#listbtncancel(type="button" onclick="cancelBtn()" name="close") Cancel
-				button.btn.btn-danger.btn-sm.invisible#listbtndelete(onclick="deleteBtn()") Delete
-				button.btn.btn-success.btn-sm.invisible#listbtnedit(onclick="editBtn()") Edit
+				button.btn.btn-danger.btn-sm#listbtndelete(onclick="deleteData()") Delete
+				button.btn.btn-success.btn-sm#listbtnedit(onclick="editData()") Edit
 				button.btn.btn-primary.btn-sm#listbtnsave(onclick="sendData()") Save
 				button.btn.btn-primary.btn-sm#listbtnupdate(onclick="updateData()") Update
 	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
