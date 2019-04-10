@@ -2,40 +2,14 @@
 	width: 400px;
 	padding-top: 150px;
 }
-.uneditable #todolist input{
-	/*background-color: green;*/
-	pointer-events: none;
-}
-.uneditable #todolist button{
-	/*background-color: green;*/
-	/*pointer-events: none;*/
-	display: none;
-}
-.uneditable #listnewitem {
-	display: none;
-}
-.uneditable #listbtndelete{
-	display: none;
-}
-.uneditable #listbtnsave{
-	display: none;
-}
-.editable #listbtnsave{
-	display: none;
-}
-.uneditable #listbtnupdate{
-	display: none;
-}
-.editable #listbtnedit{
-	display: none;
-}
-.new-note #listbtndelete{
-	display: none;
-}
-.new-note #listbtnedit{
-	display: none;
-}
-.new-note #listbtnupdate{
-	display: none;
-}
-
+.uneditable #todolist input{pointer-events: none;}
+.uneditable #todolist button{display: none;}
+.uneditable #listnewitem {display: none;}
+/*.uneditable #listbtndelete{display: none;}*/
+.uneditable #listbtnsave{	display: none;}
+.editable #listbtnsave{	display: none;}
+.uneditable #listbtnupdate{	display: none;}
+.editable #listbtnedit{	display: none;}
+.new-note #listbtndelete{	display: none;}
+.new-note #listbtnedit{	display: none;}
+.new-note #listbtnupdate{	display: none;}
