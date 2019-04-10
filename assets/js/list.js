@@ -157,6 +157,8 @@ function updateData() {
 
 //send note id to server for delete from database:
 function deleteData() {
+	if (!confirm("Уверен ?")) {return};
+
   $.ajax({
     url: '/lists/' + todolist.getAttribute('data-id'),      
     type: 'DELETE',
