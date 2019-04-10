@@ -8,7 +8,7 @@ module.exports = (app) => {
     const notesDb = connection.db(dbName);
     const notesCol = notesDb.collection(colName);
     const notes = await notesCol.find({}).toArray();
-    connection.close(); 
+    connection.close();
     res.render('index', {notes: notes});    
   });
 }

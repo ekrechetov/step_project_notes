@@ -15,7 +15,7 @@ html(lang="en")
     div.container
       ul
         each elem in notes
-          li.note(data-id=elem._id)
+          li.note(data-id=elem._id data-type=elem.type)
             h5.note-title(name="title") #{elem.title}
             p.note-text(name="text") #{elem.text}
 
