@@ -15,7 +15,7 @@ html
               input.form-control#noteTitle(type='text' name='title' value=note.title)
           div.form-group
               label(for="noteText").h5.mb-3.mt-3.font-weight-bold Текст
-              textarea.form-control#noteText(type='text' name='text') #{note.text}
+              textarea.form-control#noteText(type='text' name='text') #{note.content}
           div.form-group.d-flex.flex-column.align-items-center
               button.btn.btn-success.mb-4.mt-4(type="button" onclick="updateData()" name="save") Сохранить изменения
               button.btn.btn-secondary.mb-4#cl(type="button" onclick="cancelBtn()" name="close") Отмена

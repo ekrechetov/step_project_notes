@@ -16,8 +16,15 @@ html(lang="en")
       ul
         each elem in notes
           li.note(data-id=elem._id data-type=elem.type)
-            h5.note-title(name="title") #{elem.title}
-            p.note-text(name="text") #{elem.text}
-
+            if elem.type == 'regular'
+              h5.note-title #{elem.title}
+              p.note-text #{elem.content}
+            else
+              h5.note-title #{elem.title}
+              div
+                each element in JSON.parse(elem.content).openToDoList
+                  p.note-text - #{element}
+              div    
+                each elemen in JSON.parse(elem.content).closedToDoList
+                  p.note-text + #{elemen}
     script(src = "./js/script.js")
-    //- script(src = "./js/list_scr.js")
