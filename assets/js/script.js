@@ -72,6 +72,7 @@ function updateData() {
 
 //send note id to server for delete from database:
 function deleteData() {
+  if (!confirm("Уверен?")) {return};
   if (!myform.elements['id'].value) return;
   $.ajax({
     url: '/notes/' + myform.elements['id'].value,      
