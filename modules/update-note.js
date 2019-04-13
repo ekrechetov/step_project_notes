@@ -9,7 +9,7 @@ module.exports = (app) => {
     const id = new ObjectID(req.body.id);
     const database = connection.db(dbName);
     const notesCol = database.collection(colName);
-    await notesCol.updateOne({_id: id}, {$set: {title: req.body.title, text: req.body.text}}, {upsert: false});
+    await notesCol.updateOne({_id: id}, {$set: {title: req.body.title, content: req.body.text}}, {upsert: false});
     console.log('Note was updated: Ok');
     connection.close();
     res.send('Note was updated!');
