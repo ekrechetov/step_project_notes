@@ -12,7 +12,7 @@ app.set('view engine','pug');
 app.use(express.static('assets'));
 
 //Подключаем файл с роутами:
-require('./routes/routes')(app,    );///2-й аргумент надо?
+require('./routes/routes')(app);
 
 let port = process.env.PORT || 3010;
 app.listen(port, function() {
