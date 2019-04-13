@@ -9,8 +9,9 @@ module.exports = (app) => {
   app.post("/notes", async function (req, res) {       
     if(!req.body) return res.sendStatus(400);
     const note = {
+      type: req.body.type,
       title: req.body.title,
-      text: req.body.text
+      content: req.body.text
     };
     let connection = await MongoClient.connect(uri, {useNewUrlParser: true});
     console.log('Connected for add: Ok');

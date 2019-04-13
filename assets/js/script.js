@@ -21,6 +21,7 @@ function cancelBtn() {
 //send note to server for add to database:
 function sendData() {
   const noteObj = {
+    type: 'regular',
     title: myform.elements['title'].value,
     text: myform.elements['text'].value
   };

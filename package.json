@@ -19,9 +19,9 @@
   "homepage": "https://github.com/ekrechetov/step_project_notes#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4",
     "mongodb": "^3.2.3",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",
