@@ -1,3 +1,6 @@
+#Project has been deployed on Heroku:
+https://noteheroku.herokuapp.com/
+
 Задание
 Создать веб-приложение TO-DO лист (аналог функционала Заметки из Google Keep) и разместить его в интернете.
 
